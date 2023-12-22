@@ -1,0 +1,25 @@
+#include <stdio.h>
+#define PI 3.14159 
+
+int main() {
+    char shape;
+    float size, area;
+
+    printf("Enter the shape (S for Square, C for Circle): ");
+    scanf("%c", &shape);
+
+    printf("Enter the size: ");
+    scanf("%f", &size);
+
+    if (shape == 'S' || shape == 's') {
+        area = size * size; 
+        printf("Area of Square = %.2f\n", area);
+    } else if (shape == 'C' || shape == 'c') {
+        area = PI * size * size; 
+        printf("Area of Circle = %.2f\n", area);
+    } else {
+        printf("Invalid shape entered.\n");
+    }
+
+    return 0;
+}
